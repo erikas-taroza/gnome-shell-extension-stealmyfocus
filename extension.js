@@ -1,9 +1,9 @@
 import { Extension } from "resource:///org/gnome/shell/extensions/extension.js";
 import * as Main from "resource:///org/gnome/shell/ui/main.js";
 
-export default class FocusMyWindow extends Extension {
-  blacklist = ["WebCord"];
+const blacklist = ["WebCord"];
 
+export default class FocusMyWindow extends Extension {
   enable() {
     this._handlerid = global.display.connect(
       "window-demands-attention",
