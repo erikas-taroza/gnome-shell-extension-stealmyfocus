@@ -8,7 +8,7 @@ export default class FocusMyWindow extends Extension {
     this._handlerid = global.display.connect(
       "window-demands-attention",
       function (display, window) {
-        for (item in blacklist) {
+        for (const item of blacklist) {
           if (window.title.toLowerCase().includes(item.toLowerCase())) return;
         }
 
